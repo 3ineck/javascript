@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="alert alert-primary" role="alert">
+        <p>(1) Faça uma mensagem de 'Olá Mundo’</p>
+        <button type="button" class="btn btn-primary" onclick="helloWorld()">
+          Hello World
+        </button>
+      </div>
+      <div class="alert alert-secondary" role="alert">
+        <p>(2) Faça uma saída de soma de 2 inteiros</p>
+        <p>Digite dois números abaixo:</p>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="numero1" class="col-form-label">Número 1</label>
+          </div>
+          <div class="col-auto">
+            <input
+              type="number"
+              id="numero1"
+              class="form-control"
+              aria-describedby="passwordHelpInline"
+            />
+          </div>
+        </div>
+        <div class="row g-3 align-items-center divMeio">
+          <div class="col-auto">
+            <label for="numero2" class="col-form-label">Número 2</label>
+          </div>
+          <div class="col-auto">
+            <input
+              type="number"
+              id="numero2"
+              class="form-control"
+              aria-describedby="passwordHelpInline"
+            />
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary buttonSoma"
+          onclick="somar()"
+        >
+          Somar
+        </button>
+        <div class="row g-3 align-items-center">
+          <div class="col-auto">
+            <label for="resultado" class="col-form-label">Resultado</label>
+          </div>
+          <div class="col-auto">
+            <input
+              type="number"
+              id="resultado"
+              class="form-control"
+              aria-describedby="passwordHelpInline"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="alert alert-success" role="alert">
+        <p>(3) Altera a propriedade de um elemento por id</p>
+        <div class="spinner-border text-success" role="status" id="spinnerID">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <button
+          type="button"
+          class="btn btn-success buttonChange"
+          onclick="trocaId()"
+        >
+          Alterar o spinner por id
+        </button>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        <p>(4) Altere a propriedade de um elemento por name</p>
+        <div
+          class="spinner-border text-danger"
+          role="status"
+          name="spinnerName"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <button
+          type="button"
+          class="btn btn-danger buttonChange"
+          onclick="trocaName()"
+        >
+          Alterar o spinner por name
+        </button>
+      </div>
+      <div class="alert alert-warning" role="alert">
+        <p>(5) Altere a propriedade de um elemento por class</p>
+        <div class="classSelect spinner-border text-alert" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <button
+          type="button"
+          class="btn btn-warning buttonChange"
+          onclick="trocaClass()"
+        >
+          Alterar o spinner por class
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
